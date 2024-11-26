@@ -5,6 +5,12 @@ export const CUSTOM_RULES = [];
 // Unified rule structure
 export const UNIFIED_RULES = [
 	{
+		name: 'Emby',
+		outbound: 'Emby',
+		site_rules: ['Emby'],
+		ip_rules: []
+	},
+	{
 		name: 'Ad Block',
 		outbound: '🛑 广告拦截',
 		site_rules: ['category-ads-all'],
@@ -117,7 +123,7 @@ export const UNIFIED_RULES = [
 ];
 
 export const PREDEFINED_RULE_SETS = {
-	minimal: ['Location:CN', 'Private', 'Non-China'],
+	minimal: ['Emby'],
 	balanced: ['Location:CN', 'Private', 'Non-China', 'Google', 'Youtube', 'AI Services', 'Telegram'],
 	comprehensive: UNIFIED_RULES.map(rule => rule.name)
   };
